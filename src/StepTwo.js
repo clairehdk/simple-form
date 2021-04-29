@@ -1,21 +1,24 @@
 import React from "react";
-import Form from "./Form";
 
-const handleSubmit = (event) => {
-  event.preventDefault(); // Pour empêcher le navigateur de changer de page lors de la soumission du formulaire
-  <Form />;
-};
-
-const StepTwo = ({ name, email, password }) => {
+const StepTwo = ({ name, email, password, page, setPage }) => {
+  const handleEdit = (event) => {
+    event.preventDefault();
+    setPage(false);
+  };
   return (
-    <div>
+    <div className={page === true ? "display" : "hidden"}>
       <h1>Results</h1>
-      <div>
+      <div class="results">
         <p>Name : {name}</p>
         <p>Email : {email}</p>
         <p>Password : {password}</p>
       </div>
-      <input type="submit" value="Edit your information" />
+      <input
+        onChange={handleEdit}
+        class="edit"
+        type="submit"
+        value="Edit your information"
+      />
     </div>
   );
 };

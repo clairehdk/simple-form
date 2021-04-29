@@ -11,17 +11,17 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
 }
 .container h1 {
   font-weight: 600;
   font-size: 30px;
+  margin-bottom: 30px;
 }
 .container form {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   width: 80%;
 }
 .container form span {
@@ -30,17 +30,37 @@ body {
 }
 .container input {
   margin-bottom: 30px;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   background-color: #efefef;
   outline: none;
   border: #cccbcb 2px solid;
   border-radius: 10px;
 }
+input[type="submit"] {
+  background-color: #574dcc;
+  color: white;
+  font-weight: 600;
+  border: none;
+  font-size: 18px;
+}
 
-.hidden {
+div .hidden {
   display: none;
 }
 .display {
   display: flex;
+}
+.container .results p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.container .results {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.display input .edit {
+  width: 80%;
 }

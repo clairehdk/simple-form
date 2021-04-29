@@ -39,22 +39,13 @@ const Form = ({
       alert("Vos deux mots de passe ne sont pas identiques");
     } else {
       setPage(true);
-      <StepTwo
-        className={page === true ? "display" : "hidden"}
-        name={name}
-        email={email}
-        password={password}
-      />;
     }
   };
 
   return (
-    <div>
+    <div className={page === true ? "hidden" : "display"}>
       <h1>Create account</h1>
-      <form
-        className={page === true ? "hidden" : "display"}
-        onSubmit={handleSubmit}
-      >
+      <form onSubmit={handleSubmit}>
         <span>Name</span>
         <input
           placeholder="Jean Dupont"

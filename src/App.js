@@ -2,6 +2,7 @@ import "./App.css";
 
 import { useState } from "react";
 import Form from "./Form";
+import StepTwo from "./StepTwo";
 
 const App = () => {
   const [name, setName] = useState("");
@@ -24,6 +25,7 @@ const App = () => {
         page={page}
         setPage={setPage}
       />
+      <StepTwo page={page} name={name} email={email} password={password} />
     </div>
   );
 };
