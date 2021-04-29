@@ -12,7 +12,7 @@ const App = () => {
   const [page, setPage] = useState(false);
 
   return (
-    <div class="container">
+    <div className="container">
       <Form
         name={name}
         setName={setName}
@@ -25,7 +25,13 @@ const App = () => {
         page={page}
         setPage={setPage}
       />
-      <StepTwo page={page} name={name} email={email} password={password} />
+      <StepTwo
+        setPage={setPage}
+        page={page}
+        name={name}
+        email={email}
+        password={password}
+      />
       <footer>
         <p>
           Made with <span>React</span> at <span>Le Réacteur </span>by{" "}

@@ -8,14 +8,14 @@ const StepTwo = ({ name, email, password, page, setPage }) => {
   return (
     <div className={page === true ? "display" : "hidden"}>
       <h1>Results</h1>
-      <div class="results">
+      <div className="results">
         <p>Name : {name}</p>
         <p>Email : {email}</p>
         <p>Password : {password}</p>
       </div>
       <input
         onChange={handleEdit}
-        class="edit"
+        className="edit"
         type="submit"
         value="Edit your information"
       />
