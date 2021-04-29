@@ -26,6 +26,12 @@ const App = () => {
         setPage={setPage}
       />
       <StepTwo page={page} name={name} email={email} password={password} />
+      <footer>
+        <p>
+          Made with <span>React</span> at <span>Le Réacteur </span>by{" "}
+          <span>Claire Hart de Keating</span>
+        </p>
+      </footer>
     </div>
   );
 };
