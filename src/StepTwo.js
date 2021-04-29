@@ -1,4 +1,10 @@
 import React from "react";
+import Form from "./Form";
+
+const handleSubmit = (event) => {
+  event.preventDefault(); // Pour empêcher le navigateur de changer de page lors de la soumission du formulaire
+  <Form />;
+};
 
 const StepTwo = ({ name, email, password }) => {
   return (

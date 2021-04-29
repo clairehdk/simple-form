@@ -37,3 +37,10 @@ body {
   border: #cccbcb 2px solid;
   border-radius: 10px;
 }
+
+.hidden {
+  display: none;
+}
+.display {
+  display: flex;
+}

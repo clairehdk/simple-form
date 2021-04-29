@@ -10,6 +10,8 @@ const Form = ({
   setPassword,
   confirmPass,
   setConfirmPass,
+  samePass,
+  setSamePass,
 }) => {
   const handleEmailChange = (event) => {
     const value = event.target.value;
@@ -36,14 +38,23 @@ const Form = ({
     if (confirmPass !== password) {
       alert("Vos deux mots de passe ne sont pas identiques");
     } else {
-      <StepTwo name={name} email={email} password={password} />;
+      setSamePass(true);
+      <StepTwo
+        className={samePass === true ? "display" : "hidden"}
+        name={name}
+        email={email}
+        password={password}
+      />;
     }
   };
 
   return (
     <div>
       <h1>Create account</h1>
-      <form onSubmit={handleSubmit}>
+      <form
+        className={samePass === true ? "hidden" : "display"}
+        onSubmit={handleSubmit}
+      >
         <span>Name</span>
         <input
           placeholder="Jean Dupont"
