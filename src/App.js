@@ -8,7 +8,7 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
-  const [samePass, setSamePass] = useState(false);
+  const [page, setPage] = useState(false);
 
   return (
     <div class="container">
@@ -21,8 +21,8 @@ const App = () => {
         setPassword={setPassword}
         confirmPass={confirmPass}
         setConfirmPass={setConfirmPass}
-        samePass={samePass}
-        setSamePass={setSamePass}
+        page={page}
+        setPage={setPage}
       />
     </div>
   );
